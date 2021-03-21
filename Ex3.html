@@ -1,0 +1,20 @@
+<script>
+    'use strict'
+
+    let a = Number(prompt ("Введите первое число"));
+    let b = Number(prompt("Введите второе число"));
+
+    if (a >= 0 && b >= 0) {
+        let c = a - b;
+        alert ("Ваша разница = " + c);
+    } else if (a < 0 && b < 0) {
+        let c = a * b;
+        alert ("Произведение = " + c);
+    } else if (a < 0 || b < 0) {
+        let c = a + b;
+        alert("Ваша сумма = " + c);
+    } else {
+        alert("No no no");
+    }
+
+</script>
