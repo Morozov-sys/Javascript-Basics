@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use script";
+
+      class Post {
+        constructor(author, text, date) {
+          this.author = author;
+          this.text = text;
+          this.date = date;
+        }
+
+        edit(text) {
+          this.text = text;
+        }
+      }
+
+      let postOne = new Post("User1", "Highway", new Date());
+      console.log(postOne);
+      postOne.edit("to Hell");
+      console.log(postOne);
+
+      class AttachedPost extends Post {
+        constructor(author, text, date) {
+          super(author, text, date);
+          this.highlighted = false;
+        }
+
+        makeTextHighlited() {
+          this.highlited = true;
+        }
+      }
+
+      let postTwo = new AttachedPost(
+        "admin",
+        "What does the fox say?",
+        new Date()
+      );
+      console.log(postTwo);
+      postTwo.makeTextHighlited();
+      postTwo.edit("din din din din");
+      console.log(postTwo);
+    </script>
+  </body>
+</html>
